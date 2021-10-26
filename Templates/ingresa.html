@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Smoothie</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Open+Sans:wght@500;600&display=swap" rel="stylesheet">
+    <!-- STYLE CSS -->
+    <link rel="preload" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- NORMALIZE -->
+    <link rel="preload" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- ICONO -->
+    <link rel="icon" href="css/Iconos/smoothies.png">    
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/828dace0c0.js" crossorigin="anonymous"></script>
+    <script src="js/app.js" defer></script> <!-- El atributo defer para que cargue después del html-->
+
+</head>
+<body>
+                                                <!-- HEADER -->
+    <header>
+        <div class="banner">
+            <h5 class="banner__h5">HOY PROMOCION AMARILLA, 10% EN TODAS NUESTRAS BEBIDAS AMARILLAS</h5>
+        </div>
+    </header>
+        <div class="contenedor">
+            <nav class="menu">
+                <a class="logo" href="index.html">Planet Smoothie</a>
+                <ul class="menu__items enlance" id="otroModo">
+                    <li class="activate"><a href="menu.html">Menu</a></li>
+                    <li><a class="enlance" href="nosotros.html">Nosotros</a></li>
+                    <li><a class="enlance"  href="contacto.html">Contacto</a></li>
+                    <li><a class="enlance"  href="registro.html">Registro</a></li>
+                    <li><a class="enlance"  href="#"><img src="/css/Iconos/login.png" alt=""></a></li>
+                </ul>
+                <span class="btn_menu" onclick="showmenu(showmenu)">
+                    <i class="fa fa-bars"></i>
+                </span>
+            </nav>
+        </div>
+                            <!-- FIN DEL HEADER -->
+                            <!-- INICIO DEL CONTENIDO -->
+
+        <main>
+            <div class="contenedor__main">
+                    <img src="img/bienvenido.jpg" alt="imagen inicio">
+                <div class="contenido__main">
+                    <div class="texto__main">
+                        <div class="encabezado__inicio">
+                            <h4 class="titulo__main">BIENVENIDO</h4>
+                        </div>
+                        <div class="descripcion__inicio">
+                            <h4>Gracias por preferir PlanetSmoothie, te invitamos a conseguiro los mejores sabores de Colombia, con productos 100% colombianos. Recuerda que cada venta es una ayuda a nuestros hermanos campesinos</h4>
+                        </div>
+                        <div class="boton__inicio">
+                            <a href="menu.html" class="boton bonton__inicio" target="__blank">Nuestros productos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+                            <!-- FIN DEL CONTENIDO -->
+    <footer class="footer">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        Planeth Smoothie
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, blanditiis!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, blanditiis!</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="" class="fa fa-facebook"></a>
+                    <a href="" class="fa fa-instagram"></a>
+                    <a href="" class="fa fa-twitter"></a>
+                    <a href="" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2021 <b>Planet Smoothie</b> -  Todos los derechos reservados</small>
+        </div>
+    </footer>
+    <script src="js/modernizr.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

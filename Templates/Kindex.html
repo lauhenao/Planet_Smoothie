@@ -1,0 +1,27 @@
+{% extends "Kbase.html" %}
+{% block content %}
+        <main>
+            <div class="contenedor__main">
+                    <img src="{{url_for('static', filename='/img/bienvenido1.jpg')}}" alt="imagen inicio">
+                <div class="contenido__main">
+                    <div class="texto__main">
+                        <div class="encabezado__inicio">
+                            <h4 class="titulo__main">BIENVENIDO</h4>
+                        </div>
+                        <div class="descripcion__inicio">
+                            <h4>Gracias por preferir PlanetSmoothie, te invitamos a conseguiro los mejores sabores de Colombia, con productos 100% colombianos. Recuerda que cada venta es una ayuda a nuestros hermanos campesinos</h4>
+                        </div>
+                        <div class="boton__inicio">
+                            <a href="{{url_for ('neWmenu')}}" class="boton bonton__inicio">Nuestros productos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-whatsapp">
+                <a href="https://wa.me/+573215745238/?text=Hola!%20quiero%20un%20Smothiee...%20" target="_blank">
+                <img src="http://s2.accesoperu.com/logos/btn_whatsapp.png" alt="">
+                </a>
+            </div>
+        </main>
+{% endblock %}
+                            

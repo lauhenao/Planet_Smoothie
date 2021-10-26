@@ -1,0 +1,20 @@
+{% extends "Kbase.html" %}
+{% block content %}
+    <h3 class="titulo__producto titulo__trabaja">Login</h3> 
+    <form class="formulario__registro" action="{{ url_for('pide_login')}}" method="POST" validate>
+         {{ form.hidden_tag() }}
+        <p>
+            {{ form.usuario.label }}<br>
+            {{ form.usuario(size=30)}}<br>
+        </p>
+        <p>
+            {{ form.contrasena.label }}<br>
+            {{ form.contrasena(size=30) }}<br>
+        </p>      
+        <p> 
+            {{ form.recordar.label }} {{ form.recordar(size=2) }}
+        </p>
+        <p>
+            {{ form.enviar() }}</p>
+    </form>
+{% endblock %}

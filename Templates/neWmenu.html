@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Smoothie</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Open+Sans:wght@500;600&display=swap"
+        rel="stylesheet">
+    <!-- STYLE CSS -->
+    <!-- <link rel="preload" href="css/style.css"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/skeleton.css')}}">
+
+    <!-- NORMALIZE -->
+    <!-- <link rel="preload" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/normalize.css')}}">
+    <!-- ICONO -->
+    <link rel="icon" href="{{url_for('static', filename='css/iconos/smoothies.png')}}">
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/828dace0c0.js" crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='js/app.js')}}" defer></script> <!-- El atributo defer para que cargue después del html-->
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="banner">
+            <h5 class="banner__h5">HOY PROMOCION AMARILLA, 10% EN TODAS NUESTRAS BEBIDAS AMARILLAS</h5>
+        </div>
+    </header>
+    <div class="contenedor">
+        <nav class="menu">
+            <a class="logo" href="{{url_for ('Kindex')}}">PlanetSmoothie</a>
+            <ul class="menu__items enlance" id="otroModo">
+                <li class="activate"><a href="{{url_for ('neWmenu')}}">Menu</a></li>
+                <li><a class="enlance" href="{{url_for ('Knosotros')}}">Nosotros</a></li>
+                <li><a class="enlance" href="{{url_for ('Kcontacto')}}">Contacto</a></li>
+                <li><a class="enlance" href="{{url_for ('pide_registrar')}}">Registro</a></li>
+                <li><a class="enlance" href="{{url_for ('pide_login')}}"><img src="{{url_for('static', filename='css/iconos/login.png')}}" alt=""></a></li>
+                <!-- EMPIEZA CARRITO -->
+                <li class="submenu">
+                    <img src="{{url_for('static', filename='css/iconos/cart.jpeg')}}" alt="">
+                    <div id="carrito">
+                        <p class="boton">Smoothie Car</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th> 
+                                    <th>Smoothie</th>
+                                    <th>Cantidad</th>
+                                    <th>Agregar</th>
+                                    <!-- <th>Precio</th> -->
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="items"></tbody><!-- AQUÍ AGREGAMOS LOS PRODUCTOS AL CARRO -->
+                            <tfoot>
+                                <tr id="footer">
+                                    <th scope="row" colspan="5">No hay Smoothie delicia :C</th>
+                                </tr>
+                            </tfoot>
+                            <template id="template-footer">
+                                <th scope="row" colspan="2">Total productos</th>
+                                <td>10</td>
+                                <td>
+                                    <button class="boton btn-danger" id="vaciar-carrito">
+                                        vaciar todo
+                                    </button>
+                                    <th><a href="#" class="boton">Comprar</a></th>
+                                </td>
+                                <td class="font-weight-bold">$ <span>5000</span></td>
+                            </template>
+                            <template id="template-carrito">
+                                <tr>
+                                    <th scope="row">id</th>
+                                    <td>Café</td>
+                                    <td>1</td>
+                                    <td>
+                                        <button class="boton btn-info">
+                                            +
+                                        </button>
+                                        <button class="boton btn-danger">
+                                            -
+                                        </button>
+                                    </td>
+                                    <td>$ <span>500</span></td>
+                                </tr>
+                            </template>
+<!-- 
+                            <template id="template-card">
+                                <div class="col-12 mb-2">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5>Titulo</h5>
+                                            <p>precio</p>
+                                            <button class="btn btn-dark">Comprar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template> -->
+
+                        </table>
+                        <!--  <tr>
+                            <th><a href="#" class="boton">Vaciar carrito</a></th>
+                            <th><a href="#" class="boton">Comprar</a></th>
+                        </tr> -->
+                    </div>
+                </li>
+            </ul>
+            <span class="btn_menu" onclick="showmenu(showmenu)">
+                <i class="fa fa-bars"></i>
+            </span>
+        </nav>
+    </div>
+    <!-- FIN DEL HEADER -->
+    <!-- INICIO DEL CONTENIDO -->
+
+
+    <main>
+        <div class="contenedor__productos">
+            <div class="contenido__productos">
+                <h2 class="titulo__producto">Nuestra tienda</h2>
+                <div class="contenido__productos--contenedor">
+                    <!-- <h4>Carrito de compras</h4> -->
+                    <table class="table">
+                    <!--   <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Item</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Acción</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead> -->
+                        <tbody id="cards" ></tbody>
+                        <!-- <tfoot>
+                            <tr id="footer">
+                                <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                            </tr>
+                        </tfoot> -->
+                    </table>
+                    <!--  <h4>Cards</h4> -->
+                    <!-- <div class="row" id="cards"></div> -->
+                </div>
+
+<!--                 <template id="template-footer">
+                    <th scope="row" colspan="2">Total productos</th>
+                    <td>10</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                            vaciar todo
+                        </button>
+                    </td>
+                    <td class="font-weight-bold">$ <span>5000</span></td>
+                </template>
+
+                <template id="template-carrito">
+                    <tr>
+                        <th scope="row">id</th>
+                        <td>Café</td>
+                        <td>1</td>
+                        <td>
+                            <button class="btn btn-info btn-sm">
+                                +
+                            </button>
+                            <button class="btn btn-danger btn-sm">
+                                -
+                            </button>
+                        </td>
+                        <td>$ <span>500</span></td>
+                    </tr>
+                </template> -->
+
+                <template id="template-card"  >
+                        <div >
+                                <div class="card-body"> 
+                                    <img src="" alt="">
+                                    <h2 class="nombre__producto"></h2>
+                                    <h4 class="productos__descripcion"></h4>
+                                    <h1 class="productos__descripcion">$</h1>
+                                    <!-- <img class="btn-dark iconos__compra"  src="css/Iconos/shopping-cart.png" alt=""> -->
+                                    
+                                    <button class="boton__compra btn-dark">Agregar al carrito</button>  
+                                    <img class="iconos__compra" src="{{url_for('static', filename='css/iconos/heart.png')}}" alt="">
+                                </div>
+                        </div>
+                </template>
+            </div>
+        </div>
+        <div class="btn-whatsapp">
+            <a href="https://wa.me/+573215745238/?text=Hola!%20quiero%20un%20Smothiee...%20" target="_blank">
+                <img src="http://s2.accesoperu.com/logos/btn_whatsapp.png" alt="">
+            </a>
+        </div>
+        </div>
+    </main>
+    <!-- FIN DEL CONTENIDO -->
+    <!-- INICIO FOOTER -->
+
+    <footer class="footer">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        Planeth Smoothie
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, blanditiis!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, blanditiis!</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="" class="fa fa-facebook"></a>
+                    <a href="" class="fa fa-instagram"></a>
+                    <a href="" class="fa fa-twitter"></a>
+                    <a href="" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2021 <b>Planet Smoothie</b> - Todos los derechos reservados</small>
+        </div>
+    </footer>
+    <script src="{{url_for('static', filename='js/modernizr.js')}}"></script>
+    <script src="{{url_for('static', filename='js/app.js')}}"></script>
+    <script src="{{url_for('static', filename='js/carrito.js')}}"></script>
+    <script src="{{url_for('static', filename='js/api.json')}}"></script>
+</body>
+
+</html>

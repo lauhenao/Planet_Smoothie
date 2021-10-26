@@ -1,0 +1,79 @@
+{% extends "Kbase.html" %}
+{% block content %}
+    
+<main>
+    <div class="contenedor__productos">
+        <div class="contenido__productos">
+            <h2 class="titulo__producto">Nuestra tienda</h2>
+            <div class="contenido__productos--contenedor">
+                <div class="productos">
+                    <img src="{{url_for('static', filename='img/batido rojo.jpeg')}}" alt="Batido Rojo">
+                    <h2 class="nombre__producto">Frutos rojos</h2>
+                    <h4 class="productos__descripcion">$35.000</h4>
+                    <h4 class="productos__descripcion">Este delicioso batido contiene fresas, uvas, cerezas</h4>
+                    <div class="iconos__compra">
+                        <a href=""> <img src="{{url_for('static', filename='css/iconos/shopping-cart.png')}}"alt=""></a>
+                        <a href=""><img src="{{url_for('static', filename='css/iconos/heart.png')}}" alt=""></a>                        
+                    </div>
+                </div>
+                <div class="productos">
+                    <img  src="{{url_for('static', filename='img/batido de coco.webp')}}" alt="batido coco">
+                    <h2 class="nombre__producto">Coco</h2>
+                    <h4 class="productos__descripcion">$35.000</h4>
+                    <h4 class="productos__descripcion">Este delicioso batido contiene fresas, uvas, cerezas</h4>
+                    <div class="iconos__compra">
+                        <a href=""> <img src="{{url_for('static', filename='css/iconos/shopping-cart.png')}}"alt=""></a>
+                        <a href=""><img src="{{url_for('static', filename='css/iconos/heart.png')}}" alt=""></a>                            
+                    </div>
+                </div>
+                <div class="productos">
+                    <img src="{{url_for('static', filename='img/batido verde.jpeg')}}" alt="batido verde">
+                    <h2 class="nombre__producto">Mix green</h2>
+                    <h4 class="productos__descripcion">$35.000</h4>
+                    <h4 class="productos__descripcion">Este delicioso batido contiene fresas, uvas, cerezas</h4>
+                    <div class="iconos__compra">
+                        <a href=""> <img src="{{url_for('static', filename='css/iconos/shopping-cart.png')}}"alt=""></a>
+                        <a href=""><img src="{{url_for('static', filename='css/iconos/heart.png')}}" alt=""></a>                           
+                    </div>
+                </div>
+                <div class="productos">
+                    <img src="{{url_for('static', filename='img/kiwi.jpg')}}" alt="kiwi ">
+                    <h2 class="nombre__producto">Kiwi</h2>
+                    <h4 class="productos__descripcion">$35.000</h4>
+                    <h4 class="productos__descripcion">Este delicioso batido contiene fresas, uvas, cerezas</h4>
+                    <div class="iconos__compra">
+                        <a href=""> <img src="{{url_for('static', filename='css/iconos/shopping-cart.png')}}"alt=""></a>
+                        <a href=""><img src="{{url_for('static', filename='css/iconos/heart.png')}}" alt=""></a>                            
+                    </div>
+                </div>
+                <div class="productos">
+                    <img src="{{url_for('static', filename='img/sandia.jpg')}}"alt="sandia">
+                    <h2 class="nombre__producto">Sandia</h2>
+                    <h4 class="productos__descripcion">$35.000</h4>
+                    <h4 class="productos__descripcion">Este delicioso batido contiene fresas, uvas, cerezas</h4>
+                    <div class="iconos__compra">
+                        <a href=""> <img src="{{url_for('static', filename='css/iconos/shopping-cart.png')}}"alt=""></a>
+                        <a href=""><img src="{{url_for('static', filename='css/iconos/heart.png')}}" alt=""></a>                            
+                    </div>
+                </div>
+                <div class="productos">
+                    <img src="{{url_for('static', filename='img/mora.jpg')}}" alt="mora">
+                    <h2 class="nombre__producto">BlackBerry</h2>
+                    <h4 class="productos__descripcion">$35.000</h4>
+                    <h4 class="productos__descripcion">Este delicioso batido contiene fresas, uvas, cerezas</h4>
+                    <div class="iconos__compra">
+                        <a href=""> <img src="{{url_for('static', filename='css/iconos/shopping-cart.png')}}"alt=""></a>
+                        <a href=""><img src="{{url_for('static', filename='css/iconos/heart.png')}}" alt=""></a>                           
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-whatsapp">
+            <a href="https://wa.me/+573215745238/?text=Hola!%20quiero%20un%20Smothiee...%20" target="_blank">
+            <img src="http://s2.accesoperu.com/logos/btn_whatsapp.png" alt="">
+            </a>
+        </div>
+    </div>
+</main>
+                            <!-- FIN DEL CONTENIDO -->
+{% endblock %}

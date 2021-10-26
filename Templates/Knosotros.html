@@ -1,0 +1,64 @@
+{% extends "Kbase.html" %}
+{% block content %}
+                            <!-- INICIO DEL CONTENIDO -->
+
+        <main>
+            <div class="contenedor__nosotros--info">
+                <div class="contenido__nosotros--info">
+                    <div class="texto__nosotros">
+                        <div class="encabezado__inicio">
+                            <h4 class="titulo__nosotros">¿Quiénes somos?</h4>
+                        </div>
+                        <div class="descripcion__nosotros">
+                            <h4>Gracias por preferir PlanetSmoothie, te invitamos a conseguiro los mejores sabores de Colombia, con productos 100% colombianos. Recuerda que cada venta es una ayuda a nuestros hermanos campesinos</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenido__nosotros--testimonios">
+                    <div class="texto__nosotros">
+                        <div class="encabezado__inicio">
+                            <h4 class="titulo__nosotros">¿ A dónde vamos ?</h4>
+                        </div>
+                        <div class="descripcion__nosotros">
+                            <h4>Gracias por preferir PlanetSmoothie, te invitamos a conseguiro los mejores sabores de Colombia, con productos 100% colombianos. Recuerda que cada venta es una ayuda a nuestros hermanos campesinos</h4>
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <main>  
+            <h2 class="titulo__nosotros">TESTIMONIOS</h2>
+            <div class="contenedor__nosotros--testimonios">
+                <div class="slider">
+                    <ul>
+                        <li>
+                            <img src="{{url_for('static', filename='img/testimonio1.jpg')}}"alt="">
+                            <h2 class="titulo__nosotros">Universidad del Norte</h2>
+                            <h4 class="descripcion__nosotros">Lugar muy comodo, perfecto para un lunch entre colegos del trabajo. La atención súper buena, sus bebidas muy refrescantes. Hicimos una pequeña reunión laboral y el espacio es el indicado.</h4>
+                        </li>
+                        <li>
+                            <img src="{{url_for('static', filename='img/testimonio2.jpg')}}"alt="">
+                            <h2 class="titulo__nosotros">Jorge Campuzano</h2>
+                            <h4 class="descripcion__nosotros">Jugos muy saludables, no son muy dulces, perfectos para un niño se recargue de energias. Deberían tener una zona infantil y seguro voy todos los días.</h4>
+                        </li>
+                        <li>
+                            <img src="{{url_for('static', filename='img/testimonio3.jpg')}}"alt="">
+                            <h2 class="titulo__nosotros">Diana Correa</h2>
+                            <h4 class="descripcion__nosotros">Buen lugar, buen ambiente, creo que será mí nueva sede de estudio</h4>
+                        </li>
+                        <li>
+                            <img src="{{url_for('static', filename='img/testimonio4.jpg')}}"alt="">
+                            <h2 class="titulo__nosotros">Cristobal Uribe</h2>
+                            <h4 class="descripcion__nosotros">Perfecto para escapar un momento de la realidad, la música, la atención, el sabor, mejor dicho, este lugar debe ser un boom!!</h4>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <div class="btn-whatsapp">
+            <a href="https://wa.me/+573215745238/?text=Hola!%20quiero%20un%20Smothiee...%20" target="_blank">
+            <img src="http://s2.accesoperu.com/logos/btn_whatsapp.png" alt="">
+            </a>
+        </div>
+
+                            <!-- FIN DEL CONTENIDO -->
+{% endblock %}

@@ -1,0 +1,43 @@
+
+ {% extends "Kbase.html" %}
+ {% block content %}                           <!-- INICIO DEL CONTENIDO -->
+
+ <main>
+    <div class="contenedor__main">
+        <img src="{{url_for('static', filename='img/registro.jpg')}}" alt="Registro inicio">
+        <div class="contenido__main">
+                <h3 class="titulo__producto titulo__trabaja">Iniciar Sesión</h3> 
+                    <form class="formulario__registro">
+                        <div class="campo">
+                            <label class="campo__label__registro"for="nombre">Usuario</label>
+                            <input class="campo__field__registro" id="nombre" type="text" placeholder="Escriba su nombre" class="campo_label">
+                        </div>
+
+                                              
+                        <div class="campo">
+                            <label class="campo__label__registro"for="contraseña">Contraseña</label>
+                            <input class="campo__field__registro" id="contraseña" type="password" placeholder="Escriba su contraseña" class="campo_label">
+                        </div>
+
+                        
+                        
+                        <div class="campo">
+                            <input type="submit" value="Enviar" class="boton boton__inicio">
+                        </div>
+                </form>
+        </div>
+    </div>
+</main>
+                                                                    <!-- FIN DEL CONTENIDO DE LA PAGINA -->
+                    </div>
+                </div>
+            </div>
+            <div class="btn-whatsapp">
+                <a href="https://wa.me/+573215745238/?text=Hola!%20quiero%20un%20Smothiee...%20" target="_blank">
+                <img src="http://s2.accesoperu.com/logos/btn_whatsapp.png" alt="">
+                </a>
+            </div>
+        </main>
+
+                <!-- FIN DEL CONTENIDO -->
+{% endblock %}

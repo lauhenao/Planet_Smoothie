@@ -1,0 +1,82 @@
+{% extends "Kbase.html" %}
+{% block content %}
+                            <!-- INICIO DEL CONTENIDO -->
+<main>
+    <div class="contenedor__main">
+        <img src="{{url_for('static', filename='img/registro.jpg')}}" alt="Registro inicio">
+        <div class="contenido__main">
+                <h3 class="titulo__producto titulo__trabaja">Registrate</h3> 
+                    <form class="formulario__registro" action="{{ url_for('Kmenu')}}" method="POST"> </form>>
+                        <div class="campo">
+                            <label class="campo__label__registro"for="nombre">Usuario</label>
+                            <input class="campo__field__registro" name="nomb" id="nombre" type="text" placeholder="Escriba su nombre" class="campo_label">
+                        </div>
+
+                        <div class="campo">
+                            <label class="campo__label__registro"for="apellido">Apellido</label>
+                            <input class="campo__field__registro" name="apell" id="apellido" type="text" placeholder="Escriba su nombre" class="campo_label">
+                        </div>
+
+                        <div class="campo">
+                            <label class="campo__label__registro"for="direccion">Dirección</label>
+                            <input class="campo__field__registro" name="direcc" id="direccion" type="text" placeholder="Escriba su dirección" class="campo_label">
+                        </div>
+                        
+                        <div class="campo">
+                            <label class="campo__label__registro"for="telefono">Telefono</label>
+                            <input class="campo__field__registro"name="telef" id="telefono" type="number" placeholder="Escriba su telefono" class="campo_label">
+                        </div>
+    
+                        <div class="campo">
+                            <label class="campo__label__registro"for="email">E-mail</label>
+                            <input class="campo__field__registro" name="correo" id="email" type="email" placeholder="Escriba su E-mail" class="campo_label">
+                        </div>
+
+                        <div class="campo">
+                            <label class="campo__label__registro"for="usuario">Usuario</label>
+                            <input class="campo__field__registro" name="usuar" id="usuario" type="text" placeholder="Escriba su contraseña" class="campo_label">
+                        </div>
+
+                        <div class="campo">
+                            <label class="campo__label__registro"for="contraseña">Contraseña</label>
+                            <input class="campo__field__registro" name="contrase" id="contraseña" type="password" placeholder="Escriba su contraseña" class="campo_label">
+                        </div>
+                       
+                        <div class="campo">
+                            <label class="campo__label__registro"for="cumpleaños">Cumpleaños</label>
+                            <input class="campo__field__registro" name="cumplea" id="cumpleaños" type="date" placeholder="Escriba su fecha de nacimiento" class="campo_label">
+                        </div>
+                        <div class="campo">
+                            <label class="campo__label__registro" for="mensaje">Acepta terminos y condiciones</label>
+                            <input class="campo__field" type="checkbox">
+                        </div>
+    
+                        <div class="campo">
+                            <input type="submit" name="signup" value="Enviar" class="boton boton__inicio">
+                        </div>
+                </form>
+        </div>
+    </div>
+</main>
+                                                                    <!-- FIN DEL CONTENIDO DE LA PAGINA -->
+                    </div>
+                </div>
+            </div>
+            <div class="btn-whatsapp">
+                <a href="https://wa.me/+573215745238/?text=Hola!%20quiero%20un%20Smothiee...%20" target="_blank">
+                <img src="http://s2.accesoperu.com/logos/btn_whatsapp.png" alt="">
+                </a>
+            </div>
+        </main>
+
+
+                            <!-- FIN DEL CONTENIDO -->
+ {% endblock %}
+
+ <!-- <form action="{{ url_for('peticion')}}" method="GET">
+    <p>
+        <strong>Nombre: </strong><input type="text" name="nombre" id="nombre">
+        <strong>Apellidos: </strong><input type="text" name="apellidos" id="apellidos">
+        <button type="submit">Enviar</button>
+    </p>
+</form> -->

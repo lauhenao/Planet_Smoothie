@@ -1,0 +1,44 @@
+{% extends "Kbase.html" %}
+{% block content %}
+<!-- INICIO DEL CONTENIDO -->
+<main>
+    <div class="contenedor__main">
+        <img src="{{url_for('static', filename='/img/bienvenido1.jpg')}}" alt="Bienvenido inicio">
+        <div class="contenido__main">
+            <h3 class="titulo__producto titulo__trabaja">Trabaja con nosotros</h3>
+            <form class="formulario">
+                <div class="campo">
+                    <label class="campo__label" for="nombre">Nombre</label>
+                    <input class="campo__field" id="nombre" type="text" placeholder="Escriba su nombre"
+                        class="campo_label">
+                </div>
+
+                <div class="campo">
+                    <label class="campo__label" for="email">E-mail</label>
+                    <input class="campo__field" id="email" type="email" placeholder="Escriba su E-mail"
+                        class="campo_label">
+                </div>
+
+                <div class="campo">
+                    <label class="campo__label" for="mensaje">Mensaje</label>
+                    <textarea class="campo__field campo__field--texarea" id="mensaje"></textarea>
+                </div>
+
+                <div class="campo">
+                    <input type="submit" value="Enviar" class="boton boton__inicio">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- FIN DEL CONTENIDO DE LA PAGINA -->
+    <div class="btn-whatsapp">
+        <a href="https://wa.me/+573215745238/?text=Hola!%20quiero%20un%20Smothiee...%20" target="_blank">
+            <img src="http://s2.accesoperu.com/logos/btn_whatsapp.png" alt="">
+        </a>
+    </div>
+</main>
+<script src="{{url_for('static', filename='/js/Validarformulario.js')}}"></script>
+
+
+<!-- FIN DEL CONTENIDO -->
+{% endblock %}

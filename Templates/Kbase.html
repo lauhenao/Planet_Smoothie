@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Smoothie</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Open+Sans:wght@500;600&display=swap" rel="stylesheet">
+    <!-- STYLE CSS -->
+    <link rel="preload" href="{{url_for('static', filename='/css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
+    <!-- NORMALIZE -->
+    <link rel="preload" href="{{url_for('static', filename='/css/normalize.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/normalize.css')}}">
+    <!-- ICONO -->
+    <link rel="icon" href="{{url_for('static', filename='/css/iconos/smoothies.png')}}">    
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/828dace0c0.js" crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='/js/app.js')}}" defer></script> <!-- El atributo defer para que cargue después del html-->
+
+</head>
+<body>
+                                                <!-- HEADER -->
+    <header>
+        <div class="banner">
+            <h5 class="banner__h5">HOY PROMOCION AMARILLA, 10% EN TODAS NUESTRAS BEBIDAS AMARILLAS</h5>
+        </div>
+    </header>
+        <div class="contenedor">
+            <nav class="menu">
+                <a class="logo" href="{{url_for ('Kindex')}}">Planet Smoothie</a>
+                <ul class="menu__items enlance" id="otroModo">
+                    <li class="activate"><a href="{{url_for ('neWmenu')}}">Menu</a></li>
+                    <li><a class="enlance" href="{{url_for ('Knosotros')}}">Nosotros</a></li>
+                    <li><a class="enlance"  href="{{url_for ('Kcontacto')}}">Contacto</a></li>
+                    <li><a class="enlance"  href="{{url_for ('pide_registrar')}}">Registro</a></li>
+                    <li><a class="enlance"  href="{{url_for ('pide_login')}}"><img src="{{url_for('static', filename='/css/iconos/login.png')}}" alt=""></a></li>
+                </ul>
+                <span class="btn_menu" onclick="showmenu(showmenu)">
+                    <i class="fa fa-bars"></i>
+                </span>
+            </nav>
+        </div>
+                            <!-- FIN DEL HEADER -->
+                            <!-- INICIO DEL CONTENIDO -->
+
+{% block content %} {% endblock %}
+
+                            <!-- FIN DEL CONTENIDO -->
+    <footer class="footer">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        Planet Smoothie
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Planet Smoothie es una compañía que desea la mejor experiencia para sus consumidores!</p>
+                <p>Ayúdanos a mejorar nuestros productos y nuestros puntos de venta, comenta y cuéntanos tu experiencia.</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="" class="fa fa-facebook"></a>
+                    <a href="" class="fa fa-instagram"></a>
+                    <a href="" class="fa fa-twitter"></a>
+                    <a href="" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2021 <b>Planet Smoothie</b> -  Todos los derechos reservados</small>
+        </div>
+    </footer>
+    <script src="{{url_for('static', filename='/js/modernizr.js')}}"></script>
+    <script src="{{url_for('static', filename='/js/app.js')}}"></script>
+</body>
+</html>

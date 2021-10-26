@@ -1,0 +1,44 @@
+[
+{
+    "precio": 15000,
+    "id": 1,
+    "nombre": "Frutos rojos",
+    "info": "Este delicioso batido contiene fresas, uvas, cerezas",
+    "img" : "../static/img/batido rojo.jpeg"
+},
+{
+    "precio": 18000,
+    "id": 2,
+    "nombre": "Coco",
+    "info": "Este delicioso batido contiene fresas, uvas, cerezas",
+    "img" : "../static/img/batido de coco.webp"
+},
+{
+    "precio": 12000,
+    "id": 3,
+    "nombre": "Mix green",
+    "info": "Este delicioso batido contiene fresas, uvas, cerezas",
+    "img" : "../static/img/batido verde.jpeg"
+},
+{
+    "precio": 15000,
+    "id": 4,
+    "nombre": "Kiwi",
+    "info": "Este delicioso batido contiene fresas, uvas, cerezas",
+    "img" : "../static/img/kiwi.jpg"
+},
+{
+    "precio": 10000,
+    "id": 5,
+    "nombre": "Sandía",
+    "info": "Este delicioso batido contiene fresas, uvas, cerezas",
+    "img" : "../static/img/sandia.jpg"
+},
+{
+    "precio": 18000,
+    "id": 6,
+    "nombre": "BkackBerry",
+    "info": "Este delicioso batido contiene fresas, uvas, cerezas",
+    "img" : "../static/img/mora.jpg"
+}
+]
